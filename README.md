@@ -8,9 +8,6 @@ The player plays against the computer and tries to beat the binary machine. This
 Good that my game doesn't have a timer :)
 The game includes coordinates and a fleet of ships of different sizes that both sides have and are required to compete with.
 
-I haven't created games in my life. Programing it in the GitHub core would be considered a significant and big step for someone who doesn't understand much about software environments and possibilities to share with a larger community.
-
-Accompanying paragraph:
 The architecture code is somewhat complex and includes a large majority of functions. Each function has a necessary role in the dynamics of the game. Notable among them, check_ok() strictly verifies the validity of ship positions, get_ship() facilitates player ship placement and create_ships() authorizes players to assemble their armada. On the opponent front, create_boats() generates a crafty AI fleet, while get_shot_comp() invents computer-generated shots guided by tactical logic.
 
 The vital function that makes it simple for the user to play against the computer is show_board(). The virtual battlefield is Backended by binary-level code that just the computer can understand. Delivers the computer unfair advantages, where is the user on the upper field (the visual board existing in the terminal) can have equal benefits.
