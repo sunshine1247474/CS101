@@ -1,4 +1,4 @@
-# CS101
+# CS101 Basic level Python Terminal Game
 1st Python-Project for Code Academy
 Battleships Python Game
 
