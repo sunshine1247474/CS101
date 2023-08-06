@@ -1,7 +1,7 @@
 from random import randrange
 import random
 
-
+# Function to check if a boat placement is valid
 def check_ok(boat, taken):
     boat.sort()
     for i in range(len(boat)):
@@ -23,7 +23,7 @@ def check_ok(boat, taken):
 
     return boat
 
-
+# Function to get user input for placing their ship
 def get_ship(long, taken):
     ok = True
     while ok:
@@ -43,7 +43,7 @@ def get_ship(long, taken):
 
     return ship, taken
 
-
+# Function to create ships for the player
 def create_ships(taken, boats):
     ships = []
     # boats = [5,4,3,3,2,2]
@@ -54,7 +54,7 @@ def create_ships(taken, boats):
 
     return ships, taken
 
-
+# Function to check if a boat placement is valid based on start position and direction
 def check_boat(b, start, dirn, taken):
     boat = []
     if dirn == 1:
@@ -72,7 +72,7 @@ def check_boat(b, start, dirn, taken):
     boat = check_ok(boat, taken)
     return boat
 
-
+# Function to create computer-generated ships
 def create_boats(taken, boats):
     ships = []
     # boats = [5,4,3,3,2,2]
@@ -89,7 +89,7 @@ def create_boats(taken, boats):
 
     return ships, taken
 
-
+# Function to display the game board for the computer's placement
 def show_board_c(taken):
     print("            battleships    ")
     print("     0  1  2  3  4  5  6  7  8  9")
@@ -106,7 +106,7 @@ def show_board_c(taken):
 
         print(x, " ", row)
 
-
+# Function to get a computer-generated shot
 def get_shot_comp(guesses, tactics):
     ok = "n"
     while ok == "n":
@@ -124,7 +124,7 @@ def get_shot_comp(guesses, tactics):
 
     return shot, guesses
 
-
+# Function to display the game board with hits, misses, and computer's shots
 def show_board(hit, miss, comp):
     print("            battleships    ")
     print("     0  1  2  3  4  5  6  7  8  9")
@@ -145,7 +145,7 @@ def show_board(hit, miss, comp):
 
         print(x, " ", row)
 
-
+# Function to process a shot and update game variables
 def check_shot(shot, ships, hit, miss, comp):
     missed = 0
     for i in range(len(ships)):
@@ -162,7 +162,7 @@ def check_shot(shot, ships, hit, miss, comp):
 
     return ships, hit, miss, comp, missed
 
-
+# Function to calculate tactics for computer's shots
 def calc_tactics(shot, tactics, guesses, hit):
     temp = []
     if len(tactics) < 1:
@@ -201,7 +201,7 @@ def calc_tactics(shot, tactics, guesses, hit):
 
     return cand
 
-
+# Function to get a user's shot
 def get_shot(guesses):
     ok = "n"
     while ok == "n":
@@ -220,7 +220,7 @@ def get_shot(guesses):
 
     return shot
 
-
+# Function to check if all lists in a list are empty
 def check_if_empty_2(list_of_lists):
     return all([not elem for elem in list_of_lists])
 
